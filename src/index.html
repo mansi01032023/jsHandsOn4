@@ -173,7 +173,7 @@
 
         //task10
         // Setup
-        const myArray = [];
+        // const myArray = [];
 
         // Only change code below this line
         for (let i = 9; i > 0; i--) {
@@ -182,7 +182,135 @@
             }
         }
 
-        
+        //task11
+        // Setup
+        const myArr = [2, 3, 4, 5, 6];
+        let total = 0;
+        for (let i = 0; i < myArr.length; i++) {
+            total += myArr[i];
+        }
+
+        //task12
+        function multiplyAll(arr) {
+            let product = 1;
+            // Only change code below this line
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    product *= arr[i][j];
+                }
+            }
+            // Only change code above this line
+            return product;
+        }
+
+        multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+        //task13
+        // const myArray = [];
+        // let i = 10;
+
+        // Only change code below this line
+        do {
+            myArray.push(i);
+            i++;
+        } while (i <= 10)
+
+        //task14
+        function sum(arr, n) {
+            if (n <= 0) {
+                return 0;
+            }
+            return arr[n - 1] + sum(arr, n - 1);
+        }
+
+        //task15
+        // Setup
+        const contacts = [
+            {
+                firstName: "Akira",
+                lastName: "Laine",
+                number: "0543236543",
+                likes: ["Pizza", "Coding", "Brownie Points"],
+            },
+            {
+                firstName: "Harry",
+                lastName: "Potter",
+                number: "0994372684",
+                likes: ["Hogwarts", "Magic", "Hagrid"],
+            },
+            {
+                firstName: "Sherlock",
+                lastName: "Holmes",
+                number: "0487345643",
+                likes: ["Intriguing Cases", "Violin"],
+            },
+            {
+                firstName: "Kristian",
+                lastName: "Vos",
+                number: "unknown",
+                likes: ["JavaScript", "Gaming", "Foxes"],
+            },
+        ];
+
+        function lookUpProfile(name, prop) {
+            for (let x = 0; x < contacts.length; x++) {
+                if (contacts[x].firstName === name) {
+                    if (contacts[x].hasOwnProperty(prop)) {
+                        return contacts[x][prop];
+                    } else {
+                        return "No such property";
+                    }
+                }
+            }
+            return "No such contact";
+        }
+
+        lookUpProfile("Akira", "likes");
+
+        //task16
+        function randomFraction() {
+
+            // Only change code below this line
+
+            return Math.random();
+
+            // Only change code above this line
+        }
+
+        //task17
+        function randomWholeNum() {
+
+            // Only change code below this line
+
+            return Math.floor(Math.random() * 10);
+        }
+
+        //task18
+        function randomRange(myMin, myMax) {
+
+            return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+
+
+        }
+
+        //task19
+        function convertToInteger(str) {
+            const a = parseInt(str);
+            return a;
+        }
+
+        convertToInteger("56");
+
+        //task20
+        function convertToInteger(str) {
+            return parseInt(str, 2);
+        }
+
+        convertToInteger("10011");
+
+
+
+
 
 
 
